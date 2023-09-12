@@ -1,21 +1,22 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * main - Entry point of the program
  *
- * Rerturn - 0
+ * Rerturn: 0
  */
 int main(void)
 {
 	char string[] = "_putchar";
 
-	int i = 0;
+	int i;
 
-	while (string[i] != '\0')
+	for (i = 0; i < 8; i++)
 	{
 		_putchar(string[i]);
-		i++;
 	}
+
 	_putchar('\n');
+
 	return (0);
 }
