@@ -1,6 +1,22 @@
 #include "main.h"
 
 /**
+ * single - prints a single digit
+ * @n: digit to print
+ *
+ * Return: Void
+ */
+
+static void single(int n)
+{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar(n + '0');
+}
+
+/**
  * print_times_table - prints the n times table, starting with 0
  * @n: the input
  *
@@ -24,11 +40,7 @@ void print_times_table(int n)
 				}
 				if (num < 10 && j != 0)
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(num + '0');
+					single(num);
 				}
 				else if (num >= 100)
 				{
