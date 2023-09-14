@@ -1,25 +1,22 @@
 #include <stdio.h>
 
 /**
- * main - calculates the largest prime divider of 6128522475143
+ * main -  calculate largest prime of 612852475143
  *
- * Return - 0
+ * Return: Success 0
  */
+
 
 int main(void)
 {
 	long int num = 612852475143;
-
 	long int prime;
 
-	long int div;
-
-	for (div = 2; div <= num / 2; div++)
+	for (prime = 2; prime < num; prime++)
 	{
-		while (num % div == 0)
+		if (num % prime == 0)
 		{
-			prime = div;
-			num = num / div;
+			num = num / prime;
 		}
 	}
 	printf("%ld\n", prime);
