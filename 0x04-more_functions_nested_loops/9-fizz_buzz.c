@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * fizzbuzz - from 1 to 100, fizz for 3*k, buzz for 5*k and fizzbuzz for 15*k
+ * main - from 1 to 100, fizz for 3*k, buzz for 5*k and fizzbuzz for 15*k
  *
- * Return: void
+ * Return: 0
  */
 
-void fizzbuzz(void)
+int main(void)
 {
 	int i = 1;
 
@@ -38,4 +38,5 @@ void fizzbuzz(void)
 		}
 	}
 	printf("\n");
+	return (0);
 }
