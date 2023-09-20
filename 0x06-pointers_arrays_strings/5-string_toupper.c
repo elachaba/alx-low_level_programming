@@ -1,7 +1,5 @@
 #include "main.h"
 
-#define DIFF 32
-
 /**
  * string_toupper - change lowercase letters of a string to upper
  * @s: string to be modified
@@ -17,9 +15,9 @@ char *string_toupper(char *s)
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			s[i] = s[i] - DIFF;
+			s[i] = s[i] - 32;
 		}
-		i++;
+
 	}
 
 	return (s);

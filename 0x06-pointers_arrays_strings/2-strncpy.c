@@ -4,6 +4,7 @@
  * _strncpy - copies a string
  * @dest: the output string
  * @src: the string to copy
+ * @n: number of bytes to cat
  *
  * Return: @dest
  */
