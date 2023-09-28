@@ -36,5 +36,5 @@ int isPrime(int n, int checker)
 	{
 		return (1);
 	}
-	return (isPrime(n , checker + 1));
+	return (isPrime(n, checker + 1));
 }
