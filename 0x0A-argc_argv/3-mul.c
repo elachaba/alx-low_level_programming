@@ -1,41 +1,5 @@
-#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-
-
-/**
- * _atoi - converts a string into an integer
- * @s: the string to be converted
- *
- * Return: an integer represented in s
- */
-
-int _atoi(char *s)
-{
-	int i, sign;
-
-	unsigned int res;
-
-	res = 0;
-	i = 0;
-	sign = 1;
-	while (!(s[i] <= '9' && s[i] >= '0') && s[i] != '\0')
-	{
-		if (s[i] == '-')
-		{
-			sign = -1;
-		}
-		i++;
-	}
-	while (s[i] <= '9' && s[i] >= '0' && s[i] != '\0')
-	{
-		res += (res * 10) + (s[i] - '0');
-		i++;
-	}
-	res *= sign;
-	return (res);
-}
-
 
 
 /**
@@ -49,7 +13,7 @@ int _atoi(char *s)
 
 int main(int argc, char *argv[])
 {
-	int a, b;
+	int a, b, prod;
 
 	if (argc != 3)
 	{
@@ -57,10 +21,11 @@ int main(int argc, char *argv[])
 		return (EXIT_FAILURE);
 	}
 
-	a = _atoi(argv[1]);
-	b = _atoi(argv[2]);
+	a = atoi(argv[1]);
+	b = atoi(argv[2]);
 
-	printf("%d\n", a * b);
+	prod = a * b;
+	printf("%d\n", prod);
 	return (EXIT_SUCCESS);
 }
 
