@@ -18,24 +18,16 @@ char *str_concat(char *s1, char *s2)
 
 	if (!s1)
 	{
-		return (s2);
+		s1 = "";
 	}
 	if (!s2)
 	{
-		return (s1);
+		s2 = "";
 	}
-
-	size1 = 0;
-	while (s1[size1])
-	{
-		size1++;
-	}
-
-	size2 = 0;
-	while (s2[size2])
-	{
-		size2++;
-	}
+	for (size1 = 0; s1[size1]; size1++)
+		;
+	for (size2 = 0; s2[size2]; size2++)
+		;
 
 	concat = (char *)malloc(sizeof(char) * (size1 + size2 + 1));
 	if (!concat)
