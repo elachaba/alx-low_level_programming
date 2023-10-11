@@ -13,6 +13,11 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int idx;
 
+	if (size <= 0 || !array || !cmp)
+	{
+		return (-1);
+	}
+
 	for (idx = 0; idx < size; idx++)
 	{
 		if (cmp(array[idx]))
