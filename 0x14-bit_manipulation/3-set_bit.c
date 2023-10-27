@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * set_bit: sets the value of a bit to 1 on a given index
- * @n: the decimal to manipulate
+ * set_bit - sets the value of a bit to 1 at a given index
+ * @n: parameter
  * @index: index
  *
- * Return: 1 on success, -1 on failure
+ * Return: value
  */
 
 int set_bit(unsigned long *n, unsigned int index)
