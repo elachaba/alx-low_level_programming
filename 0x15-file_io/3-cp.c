@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 	buffer = allocate_buff(argv[2]);
 	src = open(argv[1], O_RDONLY);
 	r = read(src, buffer, 1024);
-	dest = open(argv[2], O_CREATE | O_WRONLY | O_TRUNC, 0664);
+	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (src == -1 || r == -1)
@@ -78,11 +78,11 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 		w = write(dest, buffer, r);
-		if (dest == -1 || w == -1);
+		if (dest == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to file %s\n", argv[2]);
-			freee(buffer);
+			free(buffer);
 			exit(99);
 		}
 		r = read(src, buffer, 1024);
